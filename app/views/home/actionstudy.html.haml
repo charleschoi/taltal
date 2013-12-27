@@ -1,0 +1,25 @@
+
+.container
+  .row
+    .col-lg-6
+      %h1 input
+      =form_tag("/home/modelstudy", method: "post")
+      id
+      =text_field_tag(:id, @study.id)
+      <br>
+      title
+      =text_field_tag(:title, @study.title)
+      <br>
+      description
+      =text_area_tag(:description, @study.description)
+      <br>
+      view content
+      =text_area_tag(:viewc, @study.viewc, size: "50x10")
+      <br>
+      controller content
+      =text_area_tag(:controllerc, @study.controllerc, size: "50x10")
+      <br>
+      model content
+      =text_area_tag(:modelc, @study.modelc, size: "50x10")
+      <br>
+      =submit_tag("gogo")
